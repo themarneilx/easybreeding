@@ -1,0 +1,25 @@
+{
+  "schemaVersion": 1,
+  "id": "easybreeding",
+  "version": "${version}",
+  "name": "Easy Breeding",
+  "description": "A simple mod to make animal breeding easier!",
+  "authors": [
+    "Gigabit101, Icynewyear, themarneilx"
+  ],
+  "contact": {
+    "repo": "https://github.com/themarneilx/easybreeding"
+  },
+  "license": "MIT",
+  "environment": "*",
+  "entrypoints": {
+    "main": [
+      "net.gigabit101.easybreeding.EasyBreeding"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.16.14",
+    "fabric": "*",
+    "minecraft": "1.21.5"
+  }
+}
