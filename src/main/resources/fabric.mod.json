@@ -7,7 +7,7 @@
   "authors": ["IcyNewYear", "Gigabit101", "themarneilx"],
   "license": "GPL-3.0-or-later",
   "icon": "assets/easybreeding/icon.png",
-  "environment": "server",
+  "environment": "*",
   "entrypoints": {
     "main": ["com.icyeasy.easybreeding.EasyBreedingMod"]
   },
@@ -19,8 +19,7 @@
   },
   "custom": {
     "modmenu": {
-      "parent": "server"
+      "parent": "misc"
     }
-  },
-  "icon": "assets/easybreeding/icon.png"
+  }
 }
