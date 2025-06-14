@@ -1,0 +1,14 @@
+{
+  "required": true,
+  "minVersion": "0.8",
+  "package": "com.icyeasy.easybreeding.mixin",
+  "compatibilityLevel": "JAVA_21",
+  "mixins": [
+    "AnimalEntityMixin"
+  ],
+  "client": [],
+  "server": [],
+  "injectors": {
+    "defaultRequire": 1
+  }
+}

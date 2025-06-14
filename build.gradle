@@ -1,50 +1,26 @@
 plugins {
-    id 'fabric-loom' version '1.6-SNAPSHOT'
+    id 'fabric-loom' version '1.10.5'
     id 'maven-publish'
 }
 
-group = 'com.themarneilx.easybreeding'
-version = '1.0.0'
+group = 'com.icyeasy'
+archivesBaseName = 'easybreeding'
+version = '8.0.0'
 
 repositories {
     mavenCentral()
-    maven { url "https://maven.fabricmc.net/" }
+    maven { url 'https://maven.fabricmc.net/' }
 }
 
 dependencies {
-    // Fabric
     minecraft "com.mojang:minecraft:1.21.5"
     mappings "net.fabricmc:yarn:1.21.5+build.1:v2"
     modImplementation "net.fabricmc:fabric-loader:0.16.14"
     modImplementation "net.fabricmc.fabric-api:fabric-api:0.126.0+1.21.5"
 }
 
-loom {
-    splitEnvironmentSourceSets()
-
-    // Optional: remove if you're not using mixins
-    mixin {
-        defaultRefmapName = "easybreeding.refmap.json"
-    }
-}
-
 java {
-    toolchain.languageVersion.set(JavaLanguageVersion.of(21))
+    sourceCompatibility = JavaVersion.VERSION_21
+    targetCompatibility = JavaVersion.VERSION_21
     withSourcesJar()
-}
-
-processResources {
-    inputs.property "version", project.version
-
-    filesMatching("fabric.mod.json") {
-        expand "version": project.version
-    }
-}
-
-publishing {
-    publications {
-        mavenJava(MavenPublication) {
-            from components.java
-        }
-    }
 }
